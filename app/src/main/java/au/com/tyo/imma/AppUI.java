@@ -1,8 +1,8 @@
-package au.com.tyo.sample;
+package au.com.tyo.imma;
 
 import au.com.tyo.app.ui.UIBase;
-import au.com.tyo.sample.ui.UI;
-import au.com.tyo.sample.ui.activity.ActivityLogin;
+import au.com.tyo.imma.ui.UI;
+import au.com.tyo.imma.ui.activity.ActivityLogin;
 
 /**
  * Created by Eric Tang (eric.tang@tyo.com.au) on 27/11/17.

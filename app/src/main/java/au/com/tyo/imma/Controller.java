@@ -1,6 +1,6 @@
-package au.com.tyo.sample;
+package au.com.tyo.imma;
 
-import au.com.tyo.sample.ui.UI;
+import au.com.tyo.imma.ui.UI;
 
 /**
  * Created by Eric Tang (eric.tang@tyo.com.au) on 24/11/17.

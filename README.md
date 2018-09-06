@@ -19,10 +19,13 @@ Please replace tyodroid-boilerplate with whatever name you prefer for your proje
 ## Change the package name
 
 ### Option 1
-* Rename with Android Studio's refactoring tool
-* Make sure the package name is changed int Manifest.xml
+* Rename the package name to [xxx] with Android Studio's refactoring tool
+* Make sure the package name is updated int Manifest.xml
 * Make sure the package name is updated in build.gradle in the app folder
 * "Sync Now", otherwise, "File"->"Sync Project with Gradle files"
 * "Edit"->"Find"->"Replace in Path", "sample.R" >> "[xxx].R"
 
 ### Option 2
+* "Project Structure"->"app"->"Flavor"->"defaultConfig"->"Application id": xxxx
+* Rename the package name to [xxx] with Android Studio's refactoring tool
+* Make sure the package name is updated int Manifest.xml

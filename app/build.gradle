@@ -23,16 +23,12 @@ def buildName = "build${buildTime()}"
 android {
     compileSdkVersion 28
     buildToolsVersion "27.0.3"
-
     defaultConfig {
-        applicationId "au.com.tyo.sample"
+        applicationId 'au.com.tyo.imma'
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode "${buildNumber}".toInteger()
         versionName "${versionFullName}"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
     }
@@ -75,10 +71,8 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
-
     // we don't need that any more
     //useLibrary 'org.apache.http.legacy'
-
     configurations.all {
         resolutionStrategy {
             force 'com.android.support:multidex:1.0.3'
@@ -86,6 +80,8 @@ android {
             force 'com.android.support:cardview-v7:28.0.0-alpha1'
             force 'com.android.support:appcompat-v7:28.0.0-alpha1'
         }
+    }
+    productFlavors {
     }
 }
 

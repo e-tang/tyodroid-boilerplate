@@ -1,6 +1,6 @@
-package au.com.tyo.sample;
+package au.com.tyo.imma;
 
-import au.com.tyo.sample.ui.activity.ActivityMain;
+import au.com.tyo.imma.ui.activity.ActivityMain;
 
 /**
  * Created by Eric Tang (eric.tang@tyo.com.au) on 27/11/17.

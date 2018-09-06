@@ -29,3 +29,6 @@
 [submodule "CommonJsonFormDroid"]
 	path = CommonJsonFormDroid
 	url = git@github.com:tyolab/CommonJsonFormDroid.git
+[submodule "FrescoImageViewer"]
+	path = FrescoImageViewer
+	url = git@github.com:tyolab/FrescoImageViewer.git

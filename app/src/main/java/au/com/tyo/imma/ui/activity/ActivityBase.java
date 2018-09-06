@@ -1,4 +1,4 @@
-package au.com.tyo.sample.ui.activity;
+package au.com.tyo.imma.ui.activity;
 
 import au.com.tyo.app.CommonActivity;
 

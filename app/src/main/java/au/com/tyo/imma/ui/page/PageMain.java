@@ -1,8 +1,8 @@
-package au.com.tyo.sample.ui.page;
+package au.com.tyo.imma.ui.page;
 
 import android.app.Activity;
 
-import au.com.tyo.sample.Controller;
+import au.com.tyo.imma.Controller;
 
 /**
  * Created by Eric Tang (eric.tang@tyo.com.au) on 27/11/17.
