@@ -3,6 +3,8 @@ package au.com.tyo.imma;
 import android.content.Context;
 import android.content.Intent;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+
 import au.com.tyo.app.CommonApp;
 import au.com.tyo.app.PageAgent;
 import au.com.tyo.imma.ui.UI;
@@ -20,15 +22,22 @@ public class App extends CommonApp<UI, Controller> implements Controller {
 
     public App(Context context) {
         super(context);
+
+        Fresco.initialize(context);
     }
 
     @Override
     public boolean hasUserLoggedIn() {
-        return false;
+        return true;
     }
 
     @Override
     public void bindDataFromOtherApps(Intent intent) {
         // do nothing until we have such requirement
+    }
+
+    @Override
+    public void initializeOnce() {
+        super.initializeOnce();
     }
 }

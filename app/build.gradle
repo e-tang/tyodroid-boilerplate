@@ -20,6 +20,11 @@ def buildTime() {
 def versionFullName = "${versionMajor}.${versionMinor}.${versionPatch}.${versionRelease}"
 def buildName = "build${buildTime()}"
 
+ext {
+    supportVersion = '28.0.0-alpha1'
+    frescoVersion = '1.2.0'
+}
+
 android {
     compileSdkVersion 28
     buildToolsVersion "27.0.3"
@@ -28,6 +33,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionName "${versionFullName}"
+        versionCode Integer.valueOf("${buildNumber}")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -76,9 +82,9 @@ android {
     configurations.all {
         resolutionStrategy {
             force 'com.android.support:multidex:1.0.3'
-            force 'com.android.support:support-v4:28.0.0-alpha1'
-            force 'com.android.support:cardview-v7:28.0.0-alpha1'
-            force 'com.android.support:appcompat-v7:28.0.0-alpha1'
+            force "com.android.support:support-v4:$supportVersion"
+            force "com.android.support:cardview-v7:$supportVersion"
+            force "com.android.support:appcompat-v7:$supportVersion"
         }
     }
     productFlavors {
@@ -90,7 +96,18 @@ dependencies {
     //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     //        exclude group: 'com.android.support', module: 'support-annotations'
     //    })
-    implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+
     api project(path: ':CommonAppLib')
+    api project(':FrescoImageViewer')
+
+    api "com.facebook.fresco:fresco:$frescoVersion"
+    api "com.facebook.fresco:drawee:$frescoVersion"
+
+    implementation 'com.github.mmin18:realtimeblurview:1.1.0'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    implementation 'jp.wasabeef:fresco-processors:2.0.0'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
     //    testCompile 'junit:junit:4.12'
 }
